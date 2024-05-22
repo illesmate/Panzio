@@ -1,0 +1,30 @@
+﻿<Window x:Class="Panzió.Regisztracio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Panzió"
+        mc:Ignorable="d"
+        Title="Regisztració" Height="450" Width="800">
+    <ScrollViewer>
+    <StackPanel Background="LightSkyBlue">
+        <Label Content="Név"></Label>
+        <TextBox x:Name="ugyfelnev" ></TextBox>
+        <Label Content="Ügyfél azonosító"></Label>
+        <TextBox x:Name="ugyfelaz"></TextBox>
+        <Label Content="Email"></Label>
+        <TextBox x:Name="email"></TextBox>
+        <Label Content="Születési dátum(Pl 1972-07-13)"></Label>
+        <TextBox x:Name="birth" Width="100" HorizontalAlignment="Left"></TextBox>
+        <Label Content="VIP tag?"></Label>
+        <CheckBox x:Name="yes" Content="Igen" Checked="CheckBox_Checked"></CheckBox>
+        <Label Content="Ha igen kérem a VIP kódot!"></Label>
+        <TextBox x:Name="VIPkod" Width="100" HorizontalAlignment="Left"></TextBox>
+        <Button x:Name="elozo" Content="Mentés" Width="100" Click="elozo_Click" Background="LightBlue"></Button>
+        <Button x:Name="vissza" Content="Vissza" Width="100" Margin="10" Click="vissza_Click" Background="LightBlue"></Button>
+        
+            <DataGrid x:Name="dgrracs2"></DataGrid>
+        
+    </StackPanel>
+    </ScrollViewer>
+</Window>

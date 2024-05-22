@@ -1,0 +1,23 @@
+﻿<Window x:Class="Panzió.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Panzió"
+        mc:Ignorable="d"
+        Title="Szoba foglalás" Height="500" Width="400" Background="LightSeaGreen">
+    <StackPanel>
+        <Label Content="Szobaszám"></Label>
+        <ComboBox x:Name="Szobakszama" Width="100" HorizontalAlignment="Left"></ComboBox>
+        <Label Content="Férőhelyek száma"></Label>
+        <TextBox x:Name="hely" Width="10" HorizontalAlignment="Left" TextChanged="hely_TextChanged"></TextBox>
+        <Label Content="Ár"></Label>
+        <TextBox x:Name="ar" Width="100" HorizontalAlignment="Left"></TextBox>
+        <Label Content="Mielőtt megnyomod a Foglalás gombot,kérlek töltsd ki a személyes"></Label>
+        <Label Content="adataidat a Regisztráció gombra kattintva!"></Label>
+        <Button x:Name="adatfelvitel" Content="Regisztráció" Click="adatfelvitel_Click" Background="Cyan"></Button>
+        <Button x:Name="Foglal" Content="Foglalás" Margin="50" Width="100" Click="Foglal_Click" Background="Coral"></Button>
+        <DataGrid x:Name="dgrracs"></DataGrid>
+
+    </StackPanel>
+</Window>
