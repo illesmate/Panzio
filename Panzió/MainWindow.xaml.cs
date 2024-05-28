@@ -24,7 +24,7 @@ namespace Panzió
     public partial class MainWindow : Window
     {
 
-        List<Szobak> panziList =new List<Szobak>();
+        public static List<Szobak> panziList =new List<Szobak>();
         public MainWindow()
         {
             InitializeComponent();
@@ -48,44 +48,40 @@ namespace Panzió
         {
             Regisztracio ujBevitel =  new Regisztracio();
             ujBevitel.ShowDialog();
+            dgrracs4.ItemsSource = Regisztracio.ugyfelList;
             dgrracs.Items.Refresh();
         }
-
-
-        private void hely_TextChanged(object sender, TextChangedEventArgs e)
+        private void Szobakszama_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (Szobakszama.SelectedIndex ==2)
+            if (Szobakszama.SelectedIndex == 0)
             {
-                
-                hely.Text ="2";
-                ar.Text = "6000";
-               
-                
-            }
-           else if (Szobakszama.SelectedIndex == 3)
-            {
-                hely.Text = "3";
-                ar.Text = "6000";
+                hely.Text = "4";
+                ar.Text = "12000";
             }
             else if (Szobakszama.SelectedIndex == 1)
             {
                 hely.Text = "2";
                 ar.Text = "6000";
             }
-            else if (Szobakszama.SelectedIndex == 4)
+            else if (Szobakszama.SelectedIndex == 2)
             {
                 hely.Text = "2";
+                ar.Text = "6000";
+            }
+            else if (Szobakszama.SelectedIndex == 3)
+            {
+                hely.Text = "3";
+                ar.Text = "9000";
+            }
+            else if (Szobakszama.SelectedIndex == 4)
+            {
+                hely.Text = "4";
                 ar.Text = "12000";
             }
             else if (Szobakszama.SelectedIndex == 5)
             {
                 hely.Text = "3";
-                ar.Text = "12000";
-            }
-            else if (Szobakszama.SelectedIndex == 0)
-            {
-                hely.Text = "4";
-                ar.Text = "12000";
+                ar.Text = "9000";
             }
         }
     }

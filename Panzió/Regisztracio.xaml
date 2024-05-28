@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panzió"
         mc:Ignorable="d"
-        Title="Regisztració" Height="450" Width="800">
+        Title="Regisztració" Height="450" Width="700">
     <ScrollViewer>
     <StackPanel Background="LightSkyBlue">
         <Label Content="Név"></Label>
@@ -22,9 +22,10 @@
         <TextBox x:Name="VIPkod" Width="100" HorizontalAlignment="Left"></TextBox>
         <Button x:Name="elozo" Content="Mentés" Width="100" Click="elozo_Click" Background="LightBlue"></Button>
         <Button x:Name="vissza" Content="Vissza" Width="100" Margin="10" Click="vissza_Click" Background="LightBlue"></Button>
-        
+            <StackPanel Orientation="Horizontal">
             <DataGrid x:Name="dgrracs2"></DataGrid>
-        
-    </StackPanel>
+            <DataGrid x:Name="dgrracs3"></DataGrid>
+            </StackPanel>
+        </StackPanel>
     </ScrollViewer>
 </Window>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Panzió
 {
-    internal class Ugyfel
+    public class Ugyfel
     {
         string nev;
         string azon;

@@ -19,11 +19,11 @@ namespace Panzió
     /// </summary>
     public partial class Regisztracio : Window
     {
-        List<Ugyfel> ugyfelList=new List<Ugyfel>();
+        public static List<Ugyfel> ugyfelList=new List<Ugyfel>();
         public Regisztracio()
         {
             InitializeComponent();
-            dgrracs2.ItemsSource = ugyfelList;
+            dgrracs2.ItemsSource = MainWindow.panziList;
         }
 
       
@@ -49,6 +49,7 @@ namespace Panzió
             {
                 ugyfelList.Add(new Ugyfel(ugyfelnev.Text, ugyfelaz.Text, email.Text, VIPkod.Text, DateTime.Parse(birth.Text), yes.IsChecked.Value));
                 dgrracs2.Items.Refresh();
+                dgrracs3.ItemsSource = ugyfelList;
             }
 
 

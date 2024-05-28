@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Panzió
 {
-    internal class Szobak
+    public class Szobak
     {
         int szobaszam;
         int ferohely;

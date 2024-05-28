@@ -5,19 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panzió"
         mc:Ignorable="d"
-        Title="Szoba foglalás" Height="500" Width="400" Background="LightSeaGreen">
+        Title="Szoba foglalás" Height="500" Width="600" Background="LightSeaGreen">
     <StackPanel>
         <Label Content="Szobaszám"></Label>
-        <ComboBox x:Name="Szobakszama" Width="100" HorizontalAlignment="Left"></ComboBox>
+        <ComboBox x:Name="Szobakszama" Width="100" HorizontalAlignment="Left" SelectionChanged="Szobakszama_SelectionChanged"></ComboBox>
         <Label Content="Férőhelyek száma"></Label>
-        <TextBox x:Name="hely" Width="10" HorizontalAlignment="Left" TextChanged="hely_TextChanged"></TextBox>
+        <TextBox x:Name="hely" Width="10" HorizontalAlignment="Left" IsReadOnly="True"></TextBox>
         <Label Content="Ár"></Label>
-        <TextBox x:Name="ar" Width="100" HorizontalAlignment="Left"></TextBox>
+        <TextBox x:Name="ar" Width="100" HorizontalAlignment="Left" IsReadOnly="True"></TextBox>
         <Label Content="Mielőtt megnyomod a Foglalás gombot,kérlek töltsd ki a személyes"></Label>
         <Label Content="adataidat a Regisztráció gombra kattintva!"></Label>
         <Button x:Name="adatfelvitel" Content="Regisztráció" Click="adatfelvitel_Click" Background="Cyan"></Button>
         <Button x:Name="Foglal" Content="Foglalás" Margin="50" Width="100" Click="Foglal_Click" Background="Coral"></Button>
-        <DataGrid x:Name="dgrracs"></DataGrid>
-
+        <StackPanel Orientation="Horizontal">
+            <DataGrid x:Name="dgrracs"></DataGrid>
+            <DataGrid x:Name="dgrracs4"></DataGrid>
+        </StackPanel>
     </StackPanel>
 </Window>
